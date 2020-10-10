@@ -8,8 +8,8 @@
   @media only screen and (max-width: $bp-large) {
     grid-column: full-start / full-end;
     grid-row: 1 / span 1;
-    justify-content: end;
-    
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -30,15 +30,14 @@
     display: block;
   }
 
-  &::before {
-    transform: translateY(-1.5rem);
-  }
-
-  &::after {
-    transform: translateY(1.3rem);
-  }
+  &::before { transform: translateY(-1.5rem); }
+  &::after { transform: translateY(1.3rem); }
 
   @media only screen and (max-width: $bp-large) {
-    // margin-top: 2.75rem;
+    margin-top: 0;
+    margin-right: 3rem;
+
+    &::before { transform: translateY(-1.2rem); }
+    &::after { transform: translateY(1rem); }
   }
 }
